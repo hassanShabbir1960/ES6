@@ -1,12 +1,41 @@
 ## Project Overview <a name ="overview"> </a>
 ### The Classification Task
-While LendingClub boasted a default rate of 3.39%, a much higher percentage of its loans were categorized as "charged off." This means that the loan was unlikely to be fully paid, and therefore it had been sold to a third-party collections agency. As a potential investor seeking to maximize returns, it would be usueful to predict ahead of time whether a loan would be charged off or not. In this project, we trained classification models using Logistic Regression, Random Forest, and XGBoost to predict charge-off status. 
+
+This classication task is focused on the question of whether or not patients show up for their appointment. The main qeustion we are trying to answer is if we can sucessfully predict whether a patient will show up on the appointment date. In this project, we trained classification models using DecisionTree, a RandomForest, a linear SVM , an SVM with a radial basis kernel , AdaBoost, XGBoost and blending models to predict the target variable. 
 
 ### Dataset Description
 
-The dataset we used contains over 2 million loans, with over 150 variables, spanning 2012 through 2018. A link to the dataset can be downloaded [here](https://www.kaggle.com/wordsforthewise/lending-club), and the official data dictionary for it can be downloaded [here](https://resources.lendingclub.com/LCDataDictionary.xlsx).
+The dataset we used contains 110.527 medical appointments its 14 associated variables (characteristics). The most important one if the patient show-up or no-show to the appointment. A link to the dataset can be downloaded [here](https://www.kaggle.com/joniarroba/noshowappointments)
 
-LendingClub periodically released its loan information on their website, but has since discontinued the practice. We used the most comprehensive LendingClub dataset we could find, which was scraped from the LendingClub website, agglomerated, and made available on [Kaggle](https://www.kaggle.com/wordsforthewise/lending-club). The dataset was described as loans from 2007 to 2018, but we only found loans from 2012 to 2018. Although LendingClub no longer provides support for its dataset online, we found a [data dictionary](https://resources.lendingclub.com/LCDataDictionary.xlsx) on their website that describes each of the variables.
+The data set has the following variables:
+01 - PatientId
+Identification of a patient
+02 - AppointmentID
+Identification of each appointment
+03 - Gender
+Male or Female . Female is the greater proportion, woman takes way more care of they health in comparison to man.
+04 - DataMarcacaoConsulta
+The day of the actuall appointment, when they have to visit the doctor.
+05 - DataAgendamento
+The day someone called or registered the appointment, this is before appointment of course.
+06 - Age
+How old is the patient.
+07 - Neighbourhood
+Where the appointment takes place.
+08 - Scholarship
+True of False . Observation, this is a broad topic, consider reading this article https://en.wikipedia.org/wiki/Bolsa_Fam%C3%ADlia
+09 - Hipertension
+True or False
+10 - Diabetes
+True or False
+Alcoholism
+True or False
+Handcap
+True or False
+SMS_received
+1 or more messages sent to the patient.
+No-show
+True or False.
 
 
 ### Purpose
