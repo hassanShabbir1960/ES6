@@ -12,3 +12,31 @@ LendingClub periodically released its loan information on their website, but has
 ### Purpose
 The full dataset was only available for accepted loans, so we could only build models on loans that were accepted by LendingClub. We should clarify that this is a very different task than if we could build models on all loan applications. For the latter, it would be much easier to distinguish between good and bad loans, and such a classifier would be used as a primary filter, for example by LendingClub itself. What we have instead, is to build models classifying on the "good" loans that LendingClub deemed worthy of acceptance. This is a much harder task, so we expect performance to be much worse. A potential use would be, for example, as a secondary filter deployed by one of LendingClub's peer investors seeking any additional edge (over picking at random) to maximize their returns. 
 
+
+
+## Approach used <a name ="overview"> </a>
+and bad loans, and such a classifier would be used as a primary filter, for example by LendingClub itself. What we have instead, is to build models classifying on 
+
+## Key findings <a name ="overview"> </a>
+and bad loans, and such a classifier would be used as a primary filter, for example by LendingClub itself. What we have instead, is to build models classifying on 
+
+
+## Running the code <a name ="overview"> </a>
+###  how to reproduce the results
+such a class
+
+#### Data processing
+such a class
+
+#### Classification models
+such a class
+
+#### Hyper parameter tuning
+such a class
+
+#### Ensemble models
+such a class
+
+
+## Conclusion and discussion <a name ="overview"> </a>
+such a class
