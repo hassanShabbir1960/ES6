@@ -29,36 +29,36 @@ Here are the steps that we have followed to achieve the work that needs to be do
        We then did some data visualization that includes showing the data distribution, nature of the data set.
     
     
-    3.Training ,comparing the models performance:
+    3.Training , comparing the models performance:
     
-       For the evaluation of the classifier built we used the metric accuracy that was tested on differnt folds using k-fold cross validation. And then we plot the  confusion matrix and an accuracy plot.
+       For the evaluation of the classifier built we used the metric accuracy that was tested on different folds using k-fold cross-validation. And then we plot the confusion matrix and an accuracy plot.
     
-    4. Fine tuning and saving the model:
+    4. Fine-tuning and saving the model:
     
-       We then fine tuned our models and compared their performances with other models.
+       We then fine-tuned our models and compared their performances with other models.
     
     5. Training ensemble models:
     
-       After this we trained ensemble models as they make better predictions and achieve better performance than any single contributing model.  
+       After this, we trained ensemble models as they make better predictions and achieve better performance than any single contributing model.  
 
 
 ## Key findings <a name ="overview"> </a>
 
-* On days when there is a lot of sending messages then there is a large number of patient, and vice versa, sending messages made the patient reassured that there was someone to make him remember the session, but sometimes there was not sending SMS to a patient, so a large number did not attend the appointment. there are certainly other reasons for not attending, but this was the most common.
-* About 20% of the patients did not show up to the appointments. This is significant, considering the healthcare professionals, who anticipated the patient, and became idled for the next 30 minutes or 1 hour. Overall, a healthcare worker will be idling (not doing anything) 20% of the time, which is not productive from the finance perspective.
+* On days when there is a lot of sending messages then there is a large number of patients, and vice versa, sending messages made the patient reassured that there was someone to make him remember the session, but sometimes there was not sending SMS to a patient, so a large number did not attend the appointment. there are certainly other reasons for not attending, but this was the most common.
+* About 20% of the patients did not show up to the appointments. This is significant, considering the healthcare professionals, who anticipated the patient, and became idled for the next 30 minutes or 1 hour. Overall, a healthcare worker will be idling (not doing anything) 20% of the time, which is not productive from the financial perspective.
 * Age is significant for patients who showed up for their scheduled appointment.
 * Most of our numeric columns have binary values in them i.e 1 or 0. Except for age column.    
-* Our age variable has some erroreneous entries in it. It has some outliers present in it, which 
+* Our age variable has some erroneous entries in it. It has some outliers present in it, which 
       are being checked and removed by looking at their standard deviation from the mean value.
 * Missing values in numeric columns are replaced by median and then standardization was 
       applied on them.
 * According to the model's predictions, most of the patients show up on the appointment date.
-* Person with some disbailities miss some of the appointments.
-* The data set is linearly seperable, which means a linear clsssifer can easily predict the boundaries of both classes.
-* Random Forest outperforms other algorithm in most of the cases.
-* AUC - ROC curve is a performance measurement for the classification problems at various threshold settings. ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes. The data set is imabalanced, so the models are biased towards the class that has more number of rows.
+* Person with some disabilities miss some of the appointments.
+* The data set is linearly separable, which means a linear classifier can easily predict the boundaries of both classes.
+* Random Forest outperforms other algorithms in most of cases.
+* AUC - ROC curve is a performance measurement for the classification problems at various threshold settings. ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes. The data set is imbalanced, so the models are biased towards the class that has more rows.
 * Ensemble model reduces the spread or dispersion of the predictions and model performance is better than any single contributing model. 
-* The following table is giving comparison of all models used :
+* The following table is giving a comparison of all models used :
 
 | Classifier | AUC score | Accuracy |
 | --- | --- | --- |
@@ -75,17 +75,17 @@ Here are the steps that we have followed to achieve the work that needs to be do
 
 ## Running the code <a name ="overview"> </a>
 ###  How to reproduce the results
-The project is basically divided into three parts , the code of all those parts is concatenated in a single jupyter notebook file, and markdown headings are used
+The project is basically divided into three parts, the code of all those parts is concatenated in a single jupyter notebook file, and markdown headings are used
 to indicate the start and end of each part. 
 
-To ensure the reproduceability in our results, we have set the random state to a fixed number. When random_state is set to an integer, functions will return same results for each execution. when random_state set to an None, functions will return different results for each execution. 
+To ensure the reproducibility in our results, we have set the random state to a fixed number. When random_state is set to an integer, functions will return same results for each execution. when random_state set to a None, functions will return different results for each execution. 
 
 To run the notebook successfully, one has to first install libraries that are being used in the notebook. And to install them, the following command will be used:
 pip install -r requirements.txt
 
 And then open the jupyter notebook, click on kernel-> Run all the cells.
 
-Here is the brief description of the steps being followed in each part:
+Here is a brief description of the steps being followed in each part:
 
 #### Part 1:
 
@@ -97,7 +97,7 @@ Here is the brief description of the steps being followed in each part:
 
 <li>Removed records with erroneous entries (e.g., negative ages, look at what people have done in Kaggle) </li>
 
-<li>Created a test set of 20k records that you won’t touch again for the reminder of this project until Part III. Use stratified sampling on the No-show variable to ensure test set and training set class proportions are the same. Save the train and test sets as csv files in the processed_data directory. </li>
+<li>Created a test set of 20k records that you won’t touch again for the remainder of this project until Part III. Use stratified sampling on the No-show variable to ensure test set and training set class proportions are the same. Save the train and test sets as CSV files in the processed_data directory. </li>
 
 <li>Plotted the No-show variable against the other variables in the dataset as part of Exploratory Data Analysis </li>
 
@@ -113,9 +113,9 @@ Here is the brief description of the steps being followed in each part:
 
 <li> Using sklearn fit a DecisionTree, a RandomForest, a linear SVM and an SVM with a radial basis kernel to the transformed data. For now, use default parameters for each method. </li>
 
-<li> Use 10 fold cross validation to estimate performance of each of the above methods using both accuracy and AUC as metrics. </li>
+<li> Use 10 fold cross validation to estimate the performance of each of the above methods using both accuracy and AUC as metrics. </li>
 
-<li> Based on the above choose two of the ML methods and fit a model using 5 fold cross validation for model selection and 10 fold cross validation for model assessment. </li>
+<li> Based on the above choose two of the ML methods and fit a model using 5 fold cross-validation for model selection and 10 fold cross-validation for model assessment. </li>
 
 <li> Implemented gradient descent for a linear svm and test it on the training set. </li>
 
@@ -124,7 +124,7 @@ Here is the brief description of the steps being followed in each part:
 
 <ul>  Here are the steps involved in this part </ul>  
 
-<li>Trained an AdaBoost classifier and compare its performance to the results obtained in Part II using 10 fold cross validation as before </li>
+<li>Trained an AdaBoost classifier and compare its performance to the results obtained in Part II using 10 fold cross-validation as before </li>
 
 <li>Trained an xgBoost classifier and compare its performance to the results obtained in Part II </li>
 
@@ -140,9 +140,10 @@ Here is the brief description of the steps being followed in each part:
 ## Conclusion and discussion <a name ="overview"> </a>
 
 
-We have looked at most of the columns in our data set. Some of them show relationships with whether the patient showed up to the appointment, to various degrees, and also between themselves. A few things clearly matter: time of day, the income and age of the patient, the health behaviors of the patient. So, we think this hospital's staff should be considering these details when choosing who to focus their energies on in reminders, whether they use SMS or anything else. It seems likely that the patient's actual illness history, independent of their behaviors, is not relevant.
+We have looked at most of the columns in our data set. Some of them show relationships with whether the patient showed up to the appointment, to various degrees, and also between themselves. A few things clearly matter time of day, the income and age of the patient, the health behaviors of the patient. So, we think this hospital's staff should be considering these details when choosing who to focus their energies on in reminders, whether they use SMS or anything else. It seems likely that the patient's actual illness history, independent of their behaviors, is not relevant.
 
 
 The data set contains a lot of information that will likely help predict whether a patient is going to show up to an appointment. To make accurate predictive models and draw better conclusions, more in-depth analysis is needed, and will be helped by using a bigger data set spanning a longer period of time.
+
 
 
