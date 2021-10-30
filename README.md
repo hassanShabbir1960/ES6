@@ -6,45 +6,41 @@ This classication task is focused on the question of whether or not patients sho
 ### Dataset Description
 
 The dataset we used contains 110.527 medical appointments its 14 associated variables (characteristics). The most important one if the patient show-up or no-show to the appointment. A link to the dataset can be downloaded [here](https://www.kaggle.com/joniarroba/noshowappointments)
-
-The data set has the following variables:
-01 - PatientId
-Identification of a patient
-02 - AppointmentID
-Identification of each appointment
-03 - Gender
-Male or Female . Female is the greater proportion, woman takes way more care of they health in comparison to man.
-04 - DataMarcacaoConsulta
-The day of the actuall appointment, when they have to visit the doctor.
-05 - DataAgendamento
-The day someone called or registered the appointment, this is before appointment of course.
-06 - Age
-How old is the patient.
-07 - Neighbourhood
-Where the appointment takes place.
-08 - Scholarship
-True of False . Observation, this is a broad topic, consider reading this article https://en.wikipedia.org/wiki/Bolsa_Fam%C3%ADlia
-09 - Hipertension
-True or False
-10 - Diabetes
-True or False
-Alcoholism
-True or False
-Handcap
-True or False
-SMS_received
-1 or more messages sent to the patient.
-No-show
-True or False.
-
+This data for a group of patients contain variables such as Gender, ScheduledDay, AppointmentDay, Age, Neighbourhood, Scholarship , Hipertension, Diabetes, Alcoholism, Handcap, SMS_received, No-show A person makes a doctor appointment, receives all the instructions and no-show. 
 
 ### Purpose
-The full dataset was only available for accepted loans, so we could only build models on loans that were accepted by LendingClub. We should clarify that this is a very different task than if we could build models on all loan applications. For the latter, it would be much easier to distinguish between good and bad loans, and such a classifier would be used as a primary filter, for example by LendingClub itself. What we have instead, is to build models classifying on the "good" loans that LendingClub deemed worthy of acceptance. This is a much harder task, so we expect performance to be much worse. A potential use would be, for example, as a secondary filter deployed by one of LendingClub's peer investors seeking any additional edge (over picking at random) to maximize their returns. 
 
+In this project we investigate a data set of appoinment records in public hospitals in Vitoria, Espirito Santo, Brazil. The data includes whether the patient showed up to the appointment, which is the main focus, as well as other attributes of the patient and the appointment. Our aim is to help to answer the question, "how likely is a patient with certain attributes, to show up to his hospital appointment?" We will explore the data and look for relationships between variables, to pave the way for more extensive modeling.
 
 
 ## Approach used <a name ="overview"> </a>
-and bad loans, and such a classifier would be used as a primary filter, for example by LendingClub itself. What we have instead, is to build models classifying on 
+
+
+    The notebook in the repository contains the whole process of creating and comparing machine learning classifieres to classify the health records from input. We will be starting off with the data visualization, then we will preprocess the text annd then we will move for model training, tuning, the comparision between different models and then finally we will save our model in the disk for making predictions in future.
+    
+    Here are the steps that we have followed to achieve the work that needs to be done:
+    
+    1. Dataset loading and pre-processing:
+
+       We started off with reading data set , checked out for the outliers and the missing values in our data set.
+
+    2. Data visualization:
+
+       We then did some data visualization that includes showing the data distribution, nature of the data set.
+    
+    
+    3.Training ,comparing the models performance:
+    
+       For the evaluation of the classifier built we used the metric accuracy that was tested on differnt folds using k-fold cross validation. And then we plot the  confusion matrix and an accuracy plot.
+    
+    4. Fine tuning and saving the model:
+    
+       We then fine tuned our models and compared their performances with other models.
+    
+    5. Training ensemble models:
+    
+       After this we trained ensemble models as they make better predictions and achieve better performance than any single contributing model.  
+
 
 ## Key findings <a name ="overview"> </a>
 and bad loans, and such a classifier would be used as a primary filter, for example by LendingClub itself. What we have instead, is to build models classifying on 
